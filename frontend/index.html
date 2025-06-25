@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <button id="theme-toggle" title="Toggle Theme">🌓</button>
+
+  <div class="container">
+    <header>
+      <h1>Prompare</h1>
+      <p class="subtitle">Prompt Comparison & Emission Estimator</p>
+    </header>
+
+    <main>
+      <form id="prompt-form" aria-label="Prompt Input Form">
+        <textarea id="prompt-input" placeholder="Enter your prompt..." aria-label="Prompt Input" required></textarea>
+        <button type="submit">Compare</button>
+      </form>
+
+      <section class="results" aria-live="polite">
+        <div class="card" id="instant-card">
+          <h2>LLaMA 3 Instant</h2>
+          <pre id="instant-response">…</pre>
+          <p class="stats" id="instant-stats"></p>
+          <div class="card-actions">
+            <button class="export-btn" data-model="instant" title="Export LLaMA 3 Instant Response">📄 Export</button>
+          </div>
+        </div>
+
+        <div class="card" id="versatile-card">
+          <h2>LLaMA 3 Versatile</h2>
+          <pre id="versatile-response">…</pre>
+          <p class="stats" id="versatile-stats"></p>
+          <div class="card-actions">
+            <button class="export-btn" data-model="versatile" title="Export LLaMA 3 Versatile Response">📄 Export</button>
+          </div>
+        </div>
+
+        <div class="card" id="gemma-card">
+          <h2>Gemma 2</h2>
+          <pre id="gemma-response">…</pre>
+          <p class="stats" id="gemma-stats"></p>
+          <div class="card-actions">
+            <button class="export-btn" data-model="gemma" title="Export Gemma 2 Response">📄 Export</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="history-panel" id="history-panel">
+        <h3>Prompt History</h3>
+        <ul id="history-list" aria-label="Prompt History List"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
