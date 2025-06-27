@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prompare</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script src="/static/script.js" defer></script>
 </head>
 <body>
   <button id="theme-toggle" title="Toggle Theme">🌓</button>
@@ -52,12 +53,13 @@
       </section>
 
       <section class="history-panel" id="history-panel">
-        <h3>Prompt History</h3>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h3>Prompt History</h3>
+          <button id="clear-history" title="Clear History">🗑 Clear</button>
+        </div>
         <ul id="history-list" aria-label="Prompt History List"></ul>
       </section>
     </main>
   </div>
-
-  <script src="script.js" defer></script>
 </body>
 </html>

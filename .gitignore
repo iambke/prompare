@@ -1,10 +1,8 @@
-# Environment secrets
 .env
 
-# Node modules
-node_modules/
-
-# Logs
 *.log
 
 .vscode/
+
+__pycache__/
+*.pyc

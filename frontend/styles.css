@@ -153,7 +153,7 @@ button:hover {
   justify-content: flex-end;
 }
 
-.export-btn {
+.export-btn, #clear-history {
   background: var(--accent);
   color: #fff;
   border: none;
@@ -164,7 +164,7 @@ button:hover {
   transition: background 0.2s;
 }
 
-.export-btn:hover {
+.export-btn:hover, clear-history:hover {
   background: #438ae0;
 }
 
@@ -204,16 +204,18 @@ button:hover {
 #history-list li {
   cursor: pointer;
   padding: 0.5rem 0.75rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--card-bg); 
+  border: 1px solid var(--border);
   border-radius: 6px;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
   color: var(--fg);
-  transition: background 0.2s;
+  transition: background 0.2s, border-color 0.2s;
 }
 
 #history-list li:hover {
   background: rgba(94, 158, 255, 0.1);
+  border-color: var(--accent);
   color: var(--accent);
 }
 
