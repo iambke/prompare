@@ -1,8 +1,12 @@
+node_modules/
+
 .env
 
 *.log
+npm-debug.log*
 
-.vscode/
+.DS_Store
+Thumbs.db
 
-__pycache__/
-*.pyc
+/dist
+/build
